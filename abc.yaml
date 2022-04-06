@@ -1,0 +1,10 @@
+---
+- name: "Configure host"
+  hosts: 54.227.159.229
+  connection: re
+  become: yes
+  tasks:
+    - file:
+        path: "/home/ansiuser/{{ ansible_hostname }}.txt"
+        state: touch
+
